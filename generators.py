@@ -49,11 +49,14 @@ def make_fraction_operation(rng: random.Random) -> Question:
     denoms = [2, 3, 4, 5, 6, 8, 10, 12]
 
     if kind in {"add", "sub"}:
-        denom = rng.choice(denoms)
-        a = rng.randint(1, denom - 1)
-        b = rng.randint(1, denom - 1)
-        f1 = Fraction(a, denom)
-        f2 = Fraction(b, denom)
+        denom1 = rng.choice(denoms)
+        denom2 = rng.choice(denoms)
+        
+        a = rng.randint(1, denom1 - 1)
+        b = rng.randint(1, denom2 - 1)
+        
+        f1 = Fraction(a, denom1)
+        f2 = Fraction(b, denom2)
         if kind == "sub" and f2 > f1:
             f1, f2 = f2, f1
         ans = f1 + f2 if kind == "add" else f1 - f2
