@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Math Test Generator</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto;">
+  <h1>Math Test Generator</h1>
+
+  <form method="post">
+    <label>Number of questions</label><br>
+    <input name="num_questions" type="number" min="1" value="25"><br><br>
+
+    <label>Seed (optional)</label><br>
+    <input name="seed" type="number" placeholder="Leave blank for random"><br><br>
+
+    <label>Base filename</label><br>
+    <input name="base_name" type="text" value="math_practice_test"><br><br>
+
+    <button type="submit" formaction="/worksheet">Download Worksheet</button>
+    <button type="submit" formaction="/answer-key">Download Answer Key</button>
+  </form>
+</body>
+</html>
